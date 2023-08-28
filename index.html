@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Test3.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Test3.data.br",
-        frameworkUrl: buildUrl + "/Test3.framework.js.br",
-        codeUrl: buildUrl + "/Test3.wasm.br",
+        dataUrl: buildUrl + "/Test3.data",
+        frameworkUrl: buildUrl + "/Test3.framework.js",
+        codeUrl: buildUrl + "/Test3.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "UnityVideoWebglDemo",
@@ -107,9 +107,6 @@
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
-		  
-		  	  window.unityInstance = unityInstance; 
-		  
             unityInstance.SetFullscreen(1);
           };
         }).catch((message) => {
